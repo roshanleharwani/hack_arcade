@@ -44,6 +44,10 @@ const Tournament = new mongoose.Schema({
   spectators:{
     type:Boolean,
     default:true
+  },
+  user:{
+    type:mongoose.Schema.Types.ObjectId,
+    ref: 'User',
   }
  
 });

@@ -690,7 +690,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$right$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronRight$3e$__ = __turbopack_import__("[project]/node_modules/lucide-react/dist/esm/icons/chevron-right.js [app-client] (ecmascript) <export default as ChevronRight>");
 ;
 var _s = __turbopack_refresh__.signature();
-'use client';
+"use client";
 ;
 ;
 ;
@@ -709,17 +709,17 @@ function CreateTournament() {
     const [step, setStep] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(1);
     const [date, setDate] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])();
     const [formData, setFormData] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])({
-        name: '',
-        game: '',
-        description: '',
-        format: '',
-        teamSize: '',
-        maxTeams: '',
-        entryFee: '',
-        prizePool: '',
-        rules: '',
-        startDate: '',
-        startTime: '',
+        name: "",
+        game: "",
+        description: "",
+        format: "",
+        teamSize: "",
+        maxTeams: "",
+        entryFee: "",
+        prizePool: "",
+        rules: "",
+        startDate: "",
+        startTime: "",
         streamRequired: false,
         allowSpectators: true
     });
@@ -734,6 +734,10 @@ function CreateTournament() {
     };
     const prevStep = ()=>{
         if (step > 1) setStep(step - 1);
+    };
+    const handleSubmit = async (e)=>{
+        e.preventDefault();
+        console.log(formData);
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "min-h-screen bg-[#FFFFEA] py-12 px-4",
@@ -752,24 +756,24 @@ function CreateTournament() {
                                     size: 24
                                 }, void 0, false, {
                                     fileName: "[project]/app/create-tournament/page.tsx",
-                                    lineNumber: 55,
+                                    lineNumber: 76,
                                     columnNumber: 15
                                 }, this),
                                 "TOURNEY.GG"
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/create-tournament/page.tsx",
-                            lineNumber: 54,
+                            lineNumber: 75,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/create-tournament/page.tsx",
-                        lineNumber: 53,
+                        lineNumber: 74,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/create-tournament/page.tsx",
-                    lineNumber: 52,
+                    lineNumber: 73,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -783,22 +787,22 @@ function CreateTournament() {
                                 3,
                                 4
                             ].map((num)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: `flex-1 h-2 ${num <= step ? 'bg-[#00CECB]' : 'bg-gray-200'} transition-colors`
+                                    className: `flex-1 h-2 ${num <= step ? "bg-[#00CECB]" : "bg-gray-200"} transition-colors`
                                 }, num, false, {
                                     fileName: "[project]/app/create-tournament/page.tsx",
-                                    lineNumber: 66,
+                                    lineNumber: 87,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/app/create-tournament/page.tsx",
-                            lineNumber: 64,
+                            lineNumber: 85,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "p-8",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: step === 1 ? 'block' : 'hidden',
+                                    className: step === 1 ? "block" : "hidden",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "space-y-6",
                                         children: [
@@ -811,12 +815,12 @@ function CreateTournament() {
                                                             size: 24
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/create-tournament/page.tsx",
-                                                            lineNumber: 82,
+                                                            lineNumber: 103,
                                                             columnNumber: 21
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                        lineNumber: 81,
+                                                        lineNumber: 102,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -824,13 +828,13 @@ function CreateTournament() {
                                                         children: "Tournament Details"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                        lineNumber: 84,
+                                                        lineNumber: 105,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/create-tournament/page.tsx",
-                                                lineNumber: 80,
+                                                lineNumber: 101,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -844,24 +848,24 @@ function CreateTournament() {
                                                                 children: "Tournament Name"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/create-tournament/page.tsx",
-                                                                lineNumber: 89,
+                                                                lineNumber: 110,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
                                                                 id: "name",
                                                                 value: formData.name,
-                                                                onChange: (e)=>updateFormData('name', e.target.value),
+                                                                onChange: (e)=>updateFormData("name", e.target.value),
                                                                 className: "border-2 border-black",
                                                                 placeholder: "Enter tournament name"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/create-tournament/page.tsx",
-                                                                lineNumber: 90,
+                                                                lineNumber: 111,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                        lineNumber: 88,
+                                                        lineNumber: 109,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -871,12 +875,12 @@ function CreateTournament() {
                                                                 children: "Game"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/create-tournament/page.tsx",
-                                                                lineNumber: 100,
+                                                                lineNumber: 121,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Select"], {
                                                                 value: formData.game,
-                                                                onValueChange: (value)=>updateFormData('game', value),
+                                                                onValueChange: (value)=>updateFormData("game", value),
                                                                 children: [
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectTrigger"], {
                                                                         className: "border-2 border-black",
@@ -884,12 +888,12 @@ function CreateTournament() {
                                                                             placeholder: "Select game"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/app/create-tournament/page.tsx",
-                                                                            lineNumber: 106,
+                                                                            lineNumber: 127,
                                                                             columnNumber: 25
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                                        lineNumber: 105,
+                                                                        lineNumber: 126,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectContent"], {
@@ -899,7 +903,7 @@ function CreateTournament() {
                                                                                 children: "VALORANT"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/create-tournament/page.tsx",
-                                                                                lineNumber: 109,
+                                                                                lineNumber: 130,
                                                                                 columnNumber: 25
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -907,7 +911,7 @@ function CreateTournament() {
                                                                                 children: "CS:GO"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/create-tournament/page.tsx",
-                                                                                lineNumber: 110,
+                                                                                lineNumber: 131,
                                                                                 columnNumber: 25
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -915,7 +919,7 @@ function CreateTournament() {
                                                                                 children: "League of Legends"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/create-tournament/page.tsx",
-                                                                                lineNumber: 111,
+                                                                                lineNumber: 132,
                                                                                 columnNumber: 25
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -923,25 +927,25 @@ function CreateTournament() {
                                                                                 children: "Dota 2"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/create-tournament/page.tsx",
-                                                                                lineNumber: 112,
+                                                                                lineNumber: 133,
                                                                                 columnNumber: 25
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                                        lineNumber: 108,
+                                                                        lineNumber: 129,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/create-tournament/page.tsx",
-                                                                lineNumber: 101,
+                                                                lineNumber: 122,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                        lineNumber: 99,
+                                                        lineNumber: 120,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -952,45 +956,45 @@ function CreateTournament() {
                                                                 children: "Description"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/create-tournament/page.tsx",
-                                                                lineNumber: 118,
+                                                                lineNumber: 139,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$textarea$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Textarea"], {
                                                                 id: "description",
                                                                 value: formData.description,
-                                                                onChange: (e)=>updateFormData('description', e.target.value),
+                                                                onChange: (e)=>updateFormData("description", e.target.value),
                                                                 className: "border-2 border-black min-h-[100px]",
                                                                 placeholder: "Describe your tournament"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/create-tournament/page.tsx",
-                                                                lineNumber: 119,
+                                                                lineNumber: 140,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                        lineNumber: 117,
+                                                        lineNumber: 138,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/create-tournament/page.tsx",
-                                                lineNumber: 87,
+                                                lineNumber: 108,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                        lineNumber: 79,
+                                        lineNumber: 100,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/create-tournament/page.tsx",
-                                    lineNumber: 78,
+                                    lineNumber: 99,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: step === 2 ? 'block' : 'hidden',
+                                    className: step === 2 ? "block" : "hidden",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "space-y-6",
                                         children: [
@@ -1003,12 +1007,12 @@ function CreateTournament() {
                                                             size: 24
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/create-tournament/page.tsx",
-                                                            lineNumber: 136,
+                                                            lineNumber: 159,
                                                             columnNumber: 21
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                        lineNumber: 135,
+                                                        lineNumber: 158,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -1016,13 +1020,13 @@ function CreateTournament() {
                                                         children: "Tournament Format"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                        lineNumber: 138,
+                                                        lineNumber: 161,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/create-tournament/page.tsx",
-                                                lineNumber: 134,
+                                                lineNumber: 157,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1035,29 +1039,29 @@ function CreateTournament() {
                                                                 children: "Format"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/create-tournament/page.tsx",
-                                                                lineNumber: 143,
+                                                                lineNumber: 166,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$radio$2d$group$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["RadioGroup"], {
                                                                 value: formData.format,
-                                                                onValueChange: (value)=>updateFormData('format', value),
+                                                                onValueChange: (value)=>updateFormData("format", value),
                                                                 className: "grid grid-cols-1 md:grid-cols-2 gap-4",
                                                                 children: [
                                                                     {
-                                                                        value: 'single',
-                                                                        label: 'Single Elimination'
+                                                                        value: "single",
+                                                                        label: "Single Elimination"
                                                                     },
                                                                     {
-                                                                        value: 'double',
-                                                                        label: 'Double Elimination'
+                                                                        value: "double",
+                                                                        label: "Double Elimination"
                                                                     },
                                                                     {
-                                                                        value: 'round',
-                                                                        label: 'Round Robin'
+                                                                        value: "round",
+                                                                        label: "Round Robin"
                                                                     },
                                                                     {
-                                                                        value: 'swiss',
-                                                                        label: 'Swiss System'
+                                                                        value: "swiss",
+                                                                        label: "Swiss System"
                                                                     }
                                                                 ].map((format)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                         className: "flex items-center space-x-2 border-2 border-black p-4 hover:bg-gray-50",
@@ -1067,7 +1071,7 @@ function CreateTournament() {
                                                                                 id: format.value
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/create-tournament/page.tsx",
-                                                                                lineNumber: 159,
+                                                                                lineNumber: 182,
                                                                                 columnNumber: 27
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$label$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Label"], {
@@ -1075,24 +1079,24 @@ function CreateTournament() {
                                                                                 children: format.label
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/create-tournament/page.tsx",
-                                                                                lineNumber: 160,
+                                                                                lineNumber: 186,
                                                                                 columnNumber: 27
                                                                             }, this)
                                                                         ]
                                                                     }, format.value, true, {
                                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                                        lineNumber: 155,
+                                                                        lineNumber: 178,
                                                                         columnNumber: 25
                                                                     }, this))
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/create-tournament/page.tsx",
-                                                                lineNumber: 144,
+                                                                lineNumber: 167,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                        lineNumber: 142,
+                                                        lineNumber: 165,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1106,12 +1110,12 @@ function CreateTournament() {
                                                                         children: "Team Size"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                                        lineNumber: 168,
+                                                                        lineNumber: 194,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Select"], {
                                                                         value: formData.teamSize,
-                                                                        onValueChange: (value)=>updateFormData('teamSize', value),
+                                                                        onValueChange: (value)=>updateFormData("teamSize", value),
                                                                         children: [
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectTrigger"], {
                                                                                 className: "border-2 border-black",
@@ -1119,12 +1123,12 @@ function CreateTournament() {
                                                                                     placeholder: "Select team size"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/create-tournament/page.tsx",
-                                                                                    lineNumber: 174,
+                                                                                    lineNumber: 202,
                                                                                     columnNumber: 27
                                                                                 }, this)
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/create-tournament/page.tsx",
-                                                                                lineNumber: 173,
+                                                                                lineNumber: 201,
                                                                                 columnNumber: 25
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectContent"], {
@@ -1134,7 +1138,7 @@ function CreateTournament() {
                                                                                         children: "Solo (1v1)"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                                                        lineNumber: 177,
+                                                                                        lineNumber: 205,
                                                                                         columnNumber: 27
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -1142,7 +1146,7 @@ function CreateTournament() {
                                                                                         children: "Duos (2v2)"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                                                        lineNumber: 178,
+                                                                                        lineNumber: 206,
                                                                                         columnNumber: 27
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -1150,25 +1154,25 @@ function CreateTournament() {
                                                                                         children: "5v5"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                                                        lineNumber: 179,
+                                                                                        lineNumber: 207,
                                                                                         columnNumber: 27
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/create-tournament/page.tsx",
-                                                                                lineNumber: 176,
+                                                                                lineNumber: 204,
                                                                                 columnNumber: 25
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                                        lineNumber: 169,
+                                                                        lineNumber: 195,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/create-tournament/page.tsx",
-                                                                lineNumber: 167,
+                                                                lineNumber: 193,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1179,12 +1183,12 @@ function CreateTournament() {
                                                                         children: "Maximum Teams"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                                        lineNumber: 185,
+                                                                        lineNumber: 213,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Select"], {
                                                                         value: formData.maxTeams,
-                                                                        onValueChange: (value)=>updateFormData('maxTeams', value),
+                                                                        onValueChange: (value)=>updateFormData("maxTeams", value),
                                                                         children: [
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectTrigger"], {
                                                                                 className: "border-2 border-black",
@@ -1192,12 +1196,12 @@ function CreateTournament() {
                                                                                     placeholder: "Select max teams"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/create-tournament/page.tsx",
-                                                                                    lineNumber: 191,
+                                                                                    lineNumber: 221,
                                                                                     columnNumber: 27
                                                                                 }, this)
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/create-tournament/page.tsx",
-                                                                                lineNumber: 190,
+                                                                                lineNumber: 220,
                                                                                 columnNumber: 25
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectContent"], {
@@ -1207,7 +1211,7 @@ function CreateTournament() {
                                                                                         children: "8 Teams"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                                                        lineNumber: 194,
+                                                                                        lineNumber: 224,
                                                                                         columnNumber: 27
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -1215,7 +1219,7 @@ function CreateTournament() {
                                                                                         children: "16 Teams"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                                                        lineNumber: 195,
+                                                                                        lineNumber: 225,
                                                                                         columnNumber: 27
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -1223,7 +1227,7 @@ function CreateTournament() {
                                                                                         children: "32 Teams"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                                                        lineNumber: 196,
+                                                                                        lineNumber: 226,
                                                                                         columnNumber: 27
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectItem"], {
@@ -1231,52 +1235,52 @@ function CreateTournament() {
                                                                                         children: "64 Teams"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                                                        lineNumber: 197,
+                                                                                        lineNumber: 227,
                                                                                         columnNumber: 27
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/app/create-tournament/page.tsx",
-                                                                                lineNumber: 193,
+                                                                                lineNumber: 223,
                                                                                 columnNumber: 25
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                                        lineNumber: 186,
+                                                                        lineNumber: 214,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/create-tournament/page.tsx",
-                                                                lineNumber: 184,
+                                                                lineNumber: 212,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                        lineNumber: 166,
+                                                        lineNumber: 192,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/create-tournament/page.tsx",
-                                                lineNumber: 141,
+                                                lineNumber: 164,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                        lineNumber: 133,
+                                        lineNumber: 156,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/create-tournament/page.tsx",
-                                    lineNumber: 132,
+                                    lineNumber: 155,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: step === 3 ? 'block' : 'hidden',
+                                    className: step === 3 ? "block" : "hidden",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "space-y-6",
                                         children: [
@@ -1289,12 +1293,12 @@ function CreateTournament() {
                                                             size: 24
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/create-tournament/page.tsx",
-                                                            lineNumber: 211,
+                                                            lineNumber: 241,
                                                             columnNumber: 21
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                        lineNumber: 210,
+                                                        lineNumber: 240,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -1302,13 +1306,13 @@ function CreateTournament() {
                                                         children: "Prize & Entry"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                        lineNumber: 213,
+                                                        lineNumber: 243,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/create-tournament/page.tsx",
-                                                lineNumber: 209,
+                                                lineNumber: 239,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1325,25 +1329,25 @@ function CreateTournament() {
                                                                         children: "Entry Fee (USD)"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                                        lineNumber: 219,
+                                                                        lineNumber: 249,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
                                                                         id: "entryFee",
                                                                         type: "number",
                                                                         value: formData.entryFee,
-                                                                        onChange: (e)=>updateFormData('entryFee', e.target.value),
+                                                                        onChange: (e)=>updateFormData("entryFee", e.target.value),
                                                                         className: "border-2 border-black",
                                                                         placeholder: "0.00"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                                        lineNumber: 220,
+                                                                        lineNumber: 250,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/create-tournament/page.tsx",
-                                                                lineNumber: 218,
+                                                                lineNumber: 248,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1354,31 +1358,31 @@ function CreateTournament() {
                                                                         children: "Prize Pool (USD)"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                                        lineNumber: 231,
+                                                                        lineNumber: 263,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
                                                                         id: "prizePool",
                                                                         type: "number",
                                                                         value: formData.prizePool,
-                                                                        onChange: (e)=>updateFormData('prizePool', e.target.value),
+                                                                        onChange: (e)=>updateFormData("prizePool", e.target.value),
                                                                         className: "border-2 border-black",
                                                                         placeholder: "0.00"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                                        lineNumber: 232,
+                                                                        lineNumber: 264,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/create-tournament/page.tsx",
-                                                                lineNumber: 230,
+                                                                lineNumber: 262,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                        lineNumber: 217,
+                                                        lineNumber: 247,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1389,24 +1393,24 @@ function CreateTournament() {
                                                                 children: "Prize Distribution Rules"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/create-tournament/page.tsx",
-                                                                lineNumber: 244,
+                                                                lineNumber: 278,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$textarea$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Textarea"], {
                                                                 id: "rules",
                                                                 value: formData.rules,
-                                                                onChange: (e)=>updateFormData('rules', e.target.value),
+                                                                onChange: (e)=>updateFormData("rules", e.target.value),
                                                                 className: "border-2 border-black min-h-[100px]",
                                                                 placeholder: "Describe how the prize pool will be distributed"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/create-tournament/page.tsx",
-                                                                lineNumber: 245,
+                                                                lineNumber: 279,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                        lineNumber: 243,
+                                                        lineNumber: 277,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1417,7 +1421,7 @@ function CreateTournament() {
                                                                 children: "Suggested Distribution"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/create-tournament/page.tsx",
-                                                                lineNumber: 255,
+                                                                lineNumber: 289,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -1426,67 +1430,67 @@ function CreateTournament() {
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                                         children: [
                                                                             "1st Place: 50% (",
-                                                                            formData.prizePool ? `$${Number(formData.prizePool) * 0.5}` : '$0.00',
+                                                                            formData.prizePool ? `$${Number(formData.prizePool) * 0.5}` : "$0.00",
                                                                             ")"
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                                        lineNumber: 257,
+                                                                        lineNumber: 291,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                                         children: [
                                                                             "2nd Place: 30% (",
-                                                                            formData.prizePool ? `$${Number(formData.prizePool) * 0.3}` : '$0.00',
+                                                                            formData.prizePool ? `$${Number(formData.prizePool) * 0.3}` : "$0.00",
                                                                             ")"
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                                        lineNumber: 258,
+                                                                        lineNumber: 298,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                                         children: [
                                                                             "3rd Place: 20% (",
-                                                                            formData.prizePool ? `$${Number(formData.prizePool) * 0.2}` : '$0.00',
+                                                                            formData.prizePool ? `$${Number(formData.prizePool) * 0.2}` : "$0.00",
                                                                             ")"
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                                        lineNumber: 259,
+                                                                        lineNumber: 305,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/create-tournament/page.tsx",
-                                                                lineNumber: 256,
+                                                                lineNumber: 290,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                        lineNumber: 254,
+                                                        lineNumber: 288,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/create-tournament/page.tsx",
-                                                lineNumber: 216,
+                                                lineNumber: 246,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                        lineNumber: 208,
+                                        lineNumber: 238,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/create-tournament/page.tsx",
-                                    lineNumber: 207,
+                                    lineNumber: 237,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: step === 4 ? 'block' : 'hidden',
+                                    className: step === 4 ? "block" : "hidden",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "space-y-6",
                                         children: [
@@ -1499,12 +1503,12 @@ function CreateTournament() {
                                                             size: 24
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/create-tournament/page.tsx",
-                                                            lineNumber: 271,
+                                                            lineNumber: 323,
                                                             columnNumber: 21
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                        lineNumber: 270,
+                                                        lineNumber: 322,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -1512,13 +1516,13 @@ function CreateTournament() {
                                                         children: "Schedule & Settings"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                        lineNumber: 273,
+                                                        lineNumber: 325,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/create-tournament/page.tsx",
-                                                lineNumber: 269,
+                                                lineNumber: 321,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1534,7 +1538,7 @@ function CreateTournament() {
                                                                         children: "Start Date"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                                        lineNumber: 279,
+                                                                        lineNumber: 331,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$popover$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Popover"], {
@@ -1549,25 +1553,25 @@ function CreateTournament() {
                                                                                             className: "mr-2 h-4 w-4"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/create-tournament/page.tsx",
-                                                                                            lineNumber: 286,
+                                                                                            lineNumber: 338,
                                                                                             columnNumber: 29
                                                                                         }, this),
                                                                                         date ? (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$date$2d$fns$2f$format$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["format"])(date, "PPP") : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                                             children: "Pick a date"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/app/create-tournament/page.tsx",
-                                                                                            lineNumber: 287,
-                                                                                            columnNumber: 59
+                                                                                            lineNumber: 342,
+                                                                                            columnNumber: 31
                                                                                         }, this)
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/app/create-tournament/page.tsx",
-                                                                                    lineNumber: 282,
+                                                                                    lineNumber: 334,
                                                                                     columnNumber: 27
                                                                                 }, this)
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/create-tournament/page.tsx",
-                                                                                lineNumber: 281,
+                                                                                lineNumber: 333,
                                                                                 columnNumber: 25
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$popover$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["PopoverContent"], {
@@ -1580,24 +1584,24 @@ function CreateTournament() {
                                                                                     initialFocus: true
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/create-tournament/page.tsx",
-                                                                                    lineNumber: 291,
+                                                                                    lineNumber: 347,
                                                                                     columnNumber: 27
                                                                                 }, this)
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/create-tournament/page.tsx",
-                                                                                lineNumber: 290,
+                                                                                lineNumber: 346,
                                                                                 columnNumber: 25
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                                        lineNumber: 280,
+                                                                        lineNumber: 332,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/create-tournament/page.tsx",
-                                                                lineNumber: 278,
+                                                                lineNumber: 330,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1608,12 +1612,12 @@ function CreateTournament() {
                                                                         children: "Start Time"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                                        lineNumber: 302,
+                                                                        lineNumber: 358,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Select"], {
                                                                         value: formData.startTime,
-                                                                        onValueChange: (value)=>updateFormData('startTime', value),
+                                                                        onValueChange: (value)=>updateFormData("startTime", value),
                                                                         children: [
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectTrigger"], {
                                                                                 className: "border-2 border-black",
@@ -1621,46 +1625,46 @@ function CreateTournament() {
                                                                                     placeholder: "Select time"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/app/create-tournament/page.tsx",
-                                                                                    lineNumber: 308,
+                                                                                    lineNumber: 366,
                                                                                     columnNumber: 27
                                                                                 }, this)
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/create-tournament/page.tsx",
-                                                                                lineNumber: 307,
+                                                                                lineNumber: 365,
                                                                                 columnNumber: 25
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectContent"], {
                                                                                 children: Array.from({
                                                                                     length: 24
                                                                                 }, (_, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SelectItem"], {
-                                                                                        value: `${i.toString().padStart(2, '0')}:00`,
-                                                                                        children: `${i.toString().padStart(2, '0')}:00`
+                                                                                        value: `${i.toString().padStart(2, "0")}:00`,
+                                                                                        children: `${i.toString().padStart(2, "0")}:00`
                                                                                     }, i, false, {
                                                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                                                        lineNumber: 312,
+                                                                                        lineNumber: 370,
                                                                                         columnNumber: 29
                                                                                     }, this))
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/create-tournament/page.tsx",
-                                                                                lineNumber: 310,
+                                                                                lineNumber: 368,
                                                                                 columnNumber: 25
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                                        lineNumber: 303,
+                                                                        lineNumber: 359,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/create-tournament/page.tsx",
-                                                                lineNumber: 301,
+                                                                lineNumber: 357,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                        lineNumber: 277,
+                                                        lineNumber: 329,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1676,7 +1680,7 @@ function CreateTournament() {
                                                                                 children: "Require Stream"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/create-tournament/page.tsx",
-                                                                                lineNumber: 327,
+                                                                                lineNumber: 385,
                                                                                 columnNumber: 25
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1684,27 +1688,27 @@ function CreateTournament() {
                                                                                 children: "Participants must stream their matches"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/create-tournament/page.tsx",
-                                                                                lineNumber: 328,
+                                                                                lineNumber: 386,
                                                                                 columnNumber: 25
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                                        lineNumber: 326,
+                                                                        lineNumber: 384,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$switch$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Switch"], {
                                                                         checked: formData.streamRequired,
-                                                                        onCheckedChange: (checked)=>updateFormData('streamRequired', checked)
+                                                                        onCheckedChange: (checked)=>updateFormData("streamRequired", checked)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                                        lineNumber: 332,
+                                                                        lineNumber: 390,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/create-tournament/page.tsx",
-                                                                lineNumber: 325,
+                                                                lineNumber: 383,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1717,7 +1721,7 @@ function CreateTournament() {
                                                                                 children: "Allow Spectators"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/create-tournament/page.tsx",
-                                                                                lineNumber: 340,
+                                                                                lineNumber: 400,
                                                                                 columnNumber: 25
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1725,50 +1729,50 @@ function CreateTournament() {
                                                                                 children: "Let others watch the matches"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/create-tournament/page.tsx",
-                                                                                lineNumber: 341,
+                                                                                lineNumber: 401,
                                                                                 columnNumber: 25
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                                        lineNumber: 339,
+                                                                        lineNumber: 399,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$switch$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Switch"], {
                                                                         checked: formData.allowSpectators,
-                                                                        onCheckedChange: (checked)=>updateFormData('allowSpectators', checked)
+                                                                        onCheckedChange: (checked)=>updateFormData("allowSpectators", checked)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                                        lineNumber: 345,
+                                                                        lineNumber: 405,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/create-tournament/page.tsx",
-                                                                lineNumber: 338,
+                                                                lineNumber: 398,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                        lineNumber: 324,
+                                                        lineNumber: 382,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/create-tournament/page.tsx",
-                                                lineNumber: 276,
+                                                lineNumber: 328,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                        lineNumber: 268,
+                                        lineNumber: 320,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/create-tournament/page.tsx",
-                                    lineNumber: 267,
+                                    lineNumber: 319,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1777,58 +1781,58 @@ function CreateTournament() {
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
                                             onClick: prevStep,
                                             variant: "outline",
-                                            className: `border-2 border-black ${step === 1 ? 'invisible' : ''}`,
+                                            className: `border-2 border-black ${step === 1 ? "invisible" : ""}`,
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$left$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronLeft$3e$__["ChevronLeft"], {
                                                     className: "mr-2 h-4 w-4"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/create-tournament/page.tsx",
-                                                    lineNumber: 364,
+                                                    lineNumber: 426,
                                                     columnNumber: 17
                                                 }, this),
                                                 " Previous"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/create-tournament/page.tsx",
-                                            lineNumber: 357,
+                                            lineNumber: 419,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
-                                            onClick: step === 4 ? ()=>console.log('Form submitted:', formData) : nextStep,
+                                            onClick: step === 4 ? ()=>handleSubmit : nextStep,
                                             className: "bg-[#FF5E5B] hover:bg-[#FF5E5B]/90 text-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none transition-all",
-                                            children: step === 4 ? 'Create Tournament' : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
+                                            children: step === 4 ? "Create Tournament" : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
                                                 children: [
                                                     "Next ",
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$right$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronRight$3e$__["ChevronRight"], {
                                                         className: "ml-2 h-4 w-4"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/create-tournament/page.tsx",
-                                                        lineNumber: 375,
+                                                        lineNumber: 437,
                                                         columnNumber: 26
                                                     }, this)
                                                 ]
                                             }, void 0, true)
                                         }, void 0, false, {
                                             fileName: "[project]/app/create-tournament/page.tsx",
-                                            lineNumber: 367,
+                                            lineNumber: 429,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/create-tournament/page.tsx",
-                                    lineNumber: 356,
+                                    lineNumber: 418,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/create-tournament/page.tsx",
-                            lineNumber: 76,
+                            lineNumber: 97,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/create-tournament/page.tsx",
-                    lineNumber: 62,
+                    lineNumber: 83,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1839,27 +1843,27 @@ function CreateTournament() {
                         children: "← Back to Dashboard"
                     }, void 0, false, {
                         fileName: "[project]/app/create-tournament/page.tsx",
-                        lineNumber: 385,
+                        lineNumber: 447,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/create-tournament/page.tsx",
-                    lineNumber: 384,
+                    lineNumber: 446,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/create-tournament/page.tsx",
-            lineNumber: 50,
+            lineNumber: 71,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/create-tournament/page.tsx",
-        lineNumber: 49,
+        lineNumber: 70,
         columnNumber: 5
     }, this);
 }
-_s(CreateTournament, "pOIXbdDPgw6JJ1oZg816CjLJUcc=");
+_s(CreateTournament, "jT6yfJtq7yA5lruWF8+ICDing1E=");
 _c = CreateTournament;
 var _c;
 __turbopack_refresh__.register(_c, "CreateTournament");

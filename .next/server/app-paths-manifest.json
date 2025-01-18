@@ -13,5 +13,6 @@
   "/page": "app/page.js",
   "/api/user/sign-up/route": "app/api/user/sign-up/route.js",
   "/signin/page": "app/signin/page.js",
-  "/api/user/sign-in/route": "app/api/user/sign-in/route.js"
+  "/api/user/sign-in/route": "app/api/user/sign-in/route.js",
+  "/api/user/route": "app/api/user/route.js"
 }
