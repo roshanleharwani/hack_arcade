@@ -1,17 +1,39 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-'use client'
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Badge } from "@/components/ui/badge"
-import { Progress } from "@/components/ui/progress"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Trophy, Gamepad2, Medal, Star, Settings, Crown, ChevronRight } from 'lucide-react'
-import Link from "next/link"
-import Image from "next/image"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
+import { Progress } from "@/components/ui/progress";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Trophy,
+  Gamepad2,
+  Medal,
+  Star,
+  Settings,
+  Crown,
+  ChevronRight,
+} from "lucide-react";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function ProfilePage() {
+  const [user, setUser] = useState({
+    tournament: [],
+    winnings: 0,
+    points: 0,
+    username: "",
+  });
+  useEffect(() => {
+    const fetcher = async () => {
+      const response = await fetch("/api/user");
+      const data = await response.json();
+      setUser(data);
+    };
+    fetcher();
+  }, []);
   return (
     <div className="min-h-screen bg-[#FFFFEA] py-12 px-4">
       <div className="max-w-5xl mx-auto space-y-8">
@@ -27,13 +49,13 @@ export default function ProfilePage() {
                 PRO
               </Badge>
             </div>
-            
+
             <div className="flex-1 text-center md:text-left space-y-4">
               <div>
-                <h1 className="text-3xl font-black">Trickdo</h1>
+                <h1 className="text-3xl font-black">{user.username}</h1>
                 <p className="text-gray-600">Joined January 2024</p>
               </div>
-              
+
               <div className="flex flex-wrap gap-2 justify-center md:justify-start">
                 <Badge variant="outline" className="border-2 border-black">
                   <Trophy className="w-4 h-4 mr-1" /> Tournament Winner
@@ -58,15 +80,17 @@ export default function ProfilePage() {
 
             <div className="grid grid-cols-3 gap-4 text-center">
               <div className="border-2 border-black p-3">
-                <div className="text-2xl font-bold">156</div>
+                <div className="text-2xl font-bold">
+                  {user.tournament?.length || 0}
+                </div>
                 <div className="text-sm text-gray-600">Tournaments</div>
               </div>
               <div className="border-2 border-black p-3">
-                <div className="text-2xl font-bold">23</div>
+                <div className="text-2xl font-bold">{user.winnings}</div>
                 <div className="text-sm text-gray-600">Wins</div>
               </div>
               <div className="border-2 border-black p-3">
-                <div className="text-2xl font-bold">2.4K</div>
+                <div className="text-2xl font-bold">{user.points}</div>
                 <div className="text-sm text-gray-600">Points</div>
               </div>
             </div>
@@ -76,16 +100,28 @@ export default function ProfilePage() {
         {/* Main Content */}
         <Tabs defaultValue="overview" className="space-y-6">
           <TabsList className="border-2 border-black p-1 bg-white">
-            <TabsTrigger value="overview" className="data-[state=active]:bg-[#00CECB] data-[state=active]:text-white">
+            <TabsTrigger
+              value="overview"
+              className="data-[state=active]:bg-[#00CECB] data-[state=active]:text-white"
+            >
               Overview
             </TabsTrigger>
-            <TabsTrigger value="achievements" className="data-[state=active]:bg-[#00CECB] data-[state=active]:text-white">
+            <TabsTrigger
+              value="achievements"
+              className="data-[state=active]:bg-[#00CECB] data-[state=active]:text-white"
+            >
               Achievements
             </TabsTrigger>
-            <TabsTrigger value="matches" className="data-[state=active]:bg-[#00CECB] data-[state=active]:text-white">
+            <TabsTrigger
+              value="matches"
+              className="data-[state=active]:bg-[#00CECB] data-[state=active]:text-white"
+            >
               Match History
             </TabsTrigger>
-            <TabsTrigger value="teams" className="data-[state=active]:bg-[#00CECB] data-[state=active]:text-white">
+            <TabsTrigger
+              value="teams"
+              className="data-[state=active]:bg-[#00CECB] data-[state=active]:text-white"
+            >
               Teams
             </TabsTrigger>
           </TabsList>
@@ -131,9 +167,24 @@ export default function ProfilePage() {
                 <CardContent>
                   <div className="space-y-4">
                     {[
-                      { game: 'VALORANT', hours: '450hrs', rank: 'Immortal' ,src:"/valorant.jpg"},
-                      { game: 'League of Legends', hours: '320hrs', rank: 'Diamond' ,src:"/leagueoflegends.jpg"},
-                      { game: 'CS:GO', hours: '180hrs', rank: 'Global Elite' ,src:"/csgo.jpg"},
+                      {
+                        game: "VALORANT",
+                        hours: "450hrs",
+                        rank: "Immortal",
+                        src: "/valorant.jpg",
+                      },
+                      {
+                        game: "League of Legends",
+                        hours: "320hrs",
+                        rank: "Diamond",
+                        src: "/leagueoflegends.jpg",
+                      },
+                      {
+                        game: "CS:GO",
+                        hours: "180hrs",
+                        rank: "Global Elite",
+                        src: "/csgo.jpg",
+                      },
                     ].map((game, index) => (
                       <div key={index} className="flex items-center gap-3">
                         <Image
@@ -147,7 +198,10 @@ export default function ProfilePage() {
                           <p className="font-bold">{game.game}</p>
                           <p className="text-sm text-gray-600">{game.hours}</p>
                         </div>
-                        <Badge variant="outline" className="border-2 border-black">
+                        <Badge
+                          variant="outline"
+                          className="border-2 border-black"
+                        >
                           {game.rank}
                         </Badge>
                       </div>
@@ -166,9 +220,21 @@ export default function ProfilePage() {
                 <CardContent>
                   <div className="space-y-4">
                     {[
-                      { title: 'Tournament MVP', date: '2 days ago', points: '+500' },
-                      { title: '5 Win Streak', date: '1 week ago', points: '+200' },
-                      { title: 'First Place', date: '2 weeks ago', points: '+1000' },
+                      {
+                        title: "Tournament MVP",
+                        date: "2 days ago",
+                        points: "+500",
+                      },
+                      {
+                        title: "5 Win Streak",
+                        date: "1 week ago",
+                        points: "+200",
+                      },
+                      {
+                        title: "First Place",
+                        date: "2 weeks ago",
+                        points: "+1000",
+                      },
                     ].map((achievement, index) => (
                       <div key={index} className="flex items-center gap-3">
                         <div className="bg-[#FFED66] w-10 h-10 flex items-center justify-center border-2 border-black">
@@ -176,9 +242,13 @@ export default function ProfilePage() {
                         </div>
                         <div className="flex-1">
                           <p className="font-bold">{achievement.title}</p>
-                          <p className="text-sm text-gray-600">{achievement.date}</p>
+                          <p className="text-sm text-gray-600">
+                            {achievement.date}
+                          </p>
                         </div>
-                        <span className="text-[#00CECB] font-bold">{achievement.points}</span>
+                        <span className="text-[#00CECB] font-bold">
+                          {achievement.points}
+                        </span>
                       </div>
                     ))}
                   </div>
@@ -194,9 +264,30 @@ export default function ProfilePage() {
               <CardContent>
                 <div className="space-y-4">
                   {[
-                    { game: 'VALORANT', result: 'Victory', score: '13-8', date: '2 hours ago', kda: '24/12/8' ,img:"/valorant.jpg" },
-                    { game: 'VALORANT', result: 'Defeat', score: '11-13', date: '5 hours ago', kda: '18/15/6' ,img:"/valorant.jpg"},
-                    { game: 'League of Legends', result: 'Victory', score: 'WIN', date: '1 day ago', kda: '12/3/15' ,img:"/leagueoflegends.jpg"},
+                    {
+                      game: "VALORANT",
+                      result: "Victory",
+                      score: "13-8",
+                      date: "2 hours ago",
+                      kda: "24/12/8",
+                      img: "/valorant.jpg",
+                    },
+                    {
+                      game: "VALORANT",
+                      result: "Defeat",
+                      score: "11-13",
+                      date: "5 hours ago",
+                      kda: "18/15/6",
+                      img: "/valorant.jpg",
+                    },
+                    {
+                      game: "League of Legends",
+                      result: "Victory",
+                      score: "WIN",
+                      date: "1 day ago",
+                      kda: "12/3/15",
+                      img: "/leagueoflegends.jpg",
+                    },
                   ].map((match, index) => (
                     <div
                       key={index}
@@ -215,9 +306,9 @@ export default function ProfilePage() {
                           <Badge
                             variant="outline"
                             className={`border-2 ${
-                              match.result === 'Victory'
-                                ? 'border-green-500 text-green-500'
-                                : 'border-red-500 text-red-500'
+                              match.result === "Victory"
+                                ? "border-green-500 text-green-500"
+                                : "border-red-500 text-red-500"
                             }`}
                           >
                             {match.result}
@@ -241,25 +332,57 @@ export default function ProfilePage() {
               <CardContent className="p-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   {[
-                    { title: 'Tournament Victor', desc: 'Win 10 tournaments', progress: 70 },
-                    { title: 'Winning Streak', desc: 'Win 5 matches in a row', progress: 100 },
-                    { title: 'Sharp Shooter', desc: 'Achieve 80% accuracy', progress: 45 },
-                    { title: 'Team Leader', desc: 'Lead 5 teams to victory', progress: 60 },
-                    { title: 'Community Star', desc: 'Receive 100 commendations', progress: 25 },
-                    { title: 'Global Elite', desc: 'Reach top 1% rank', progress: 90 },
+                    {
+                      title: "Tournament Victor",
+                      desc: "Win 10 tournaments",
+                      progress: 70,
+                    },
+                    {
+                      title: "Winning Streak",
+                      desc: "Win 5 matches in a row",
+                      progress: 100,
+                    },
+                    {
+                      title: "Sharp Shooter",
+                      desc: "Achieve 80% accuracy",
+                      progress: 45,
+                    },
+                    {
+                      title: "Team Leader",
+                      desc: "Lead 5 teams to victory",
+                      progress: 60,
+                    },
+                    {
+                      title: "Community Star",
+                      desc: "Receive 100 commendations",
+                      progress: 25,
+                    },
+                    {
+                      title: "Global Elite",
+                      desc: "Reach top 1% rank",
+                      progress: 90,
+                    },
                   ].map((achievement, index) => (
-                    <div key={index} className="border-2 border-black p-4 space-y-4">
+                    <div
+                      key={index}
+                      className="border-2 border-black p-4 space-y-4"
+                    >
                       <div className="flex items-center gap-3">
                         <div className="bg-[#FFED66] w-10 h-10 flex items-center justify-center border-2 border-black">
                           <Trophy className="w-5 h-5" />
                         </div>
                         <div>
                           <h3 className="font-bold">{achievement.title}</h3>
-                          <p className="text-sm text-gray-600">{achievement.desc}</p>
+                          <p className="text-sm text-gray-600">
+                            {achievement.desc}
+                          </p>
                         </div>
                       </div>
                       <div className="space-y-2">
-                        <Progress value={achievement.progress} className="h-2" />
+                        <Progress
+                          value={achievement.progress}
+                          className="h-2"
+                        />
                         <div className="text-right text-sm text-gray-600">
                           {achievement.progress}%
                         </div>
@@ -275,10 +398,42 @@ export default function ProfilePage() {
             <Card className="border-2 border-black">
               <CardContent className="p-6 space-y-4">
                 {[
-                  { game: 'VALORANT', result: 'Victory', score: '13-8', date: '2 hours ago', kda: '24/12/8', map: 'Haven',img:"/valorant.jpg" },
-                  { game: 'VALORANT', result: 'Defeat', score: '11-13', date: '5 hours ago', kda: '18/15/6', map: 'Bind' ,img:"/valorant.jpg"},
-                  { game: 'League of Legends', result: 'Victory', score: 'WIN', date: '1 day ago', kda: '12/3/15', map: 'Summoner\'s Rift' ,img:"/leagueoflegends.jpg"},
-                  { game: 'CS:GO', result: 'Victory', score: '16-14', date: '2 days ago', kda: '25/18/4', map: 'Dust II',img:"/csgo.jpg" },
+                  {
+                    game: "VALORANT",
+                    result: "Victory",
+                    score: "13-8",
+                    date: "2 hours ago",
+                    kda: "24/12/8",
+                    map: "Haven",
+                    img: "/valorant.jpg",
+                  },
+                  {
+                    game: "VALORANT",
+                    result: "Defeat",
+                    score: "11-13",
+                    date: "5 hours ago",
+                    kda: "18/15/6",
+                    map: "Bind",
+                    img: "/valorant.jpg",
+                  },
+                  {
+                    game: "League of Legends",
+                    result: "Victory",
+                    score: "WIN",
+                    date: "1 day ago",
+                    kda: "12/3/15",
+                    map: "Summoner's Rift",
+                    img: "/leagueoflegends.jpg",
+                  },
+                  {
+                    game: "CS:GO",
+                    result: "Victory",
+                    score: "16-14",
+                    date: "2 days ago",
+                    kda: "25/18/4",
+                    map: "Dust II",
+                    img: "/csgo.jpg",
+                  },
                 ].map((match, index) => (
                   <div
                     key={index}
@@ -297,9 +452,9 @@ export default function ProfilePage() {
                         <Badge
                           variant="outline"
                           className={`border-2 ${
-                            match.result === 'Victory'
-                              ? 'border-green-500 text-green-500'
-                              : 'border-red-500 text-red-500'
+                            match.result === "Victory"
+                              ? "border-green-500 text-green-500"
+                              : "border-red-500 text-red-500"
                           }`}
                         >
                           {match.result}
@@ -308,13 +463,14 @@ export default function ProfilePage() {
                       <p className="text-sm text-gray-600">
                         {match.map} • {match.score}
                       </p>
-                      <p className="text-sm text-gray-600">
-                        KDA: {match.kda}
-                      </p>
+                      <p className="text-sm text-gray-600">KDA: {match.kda}</p>
                     </div>
                     <div className="text-right">
                       <div className="text-sm text-gray-600">{match.date}</div>
-                      <Button variant="outline" className="mt-2 border-2 border-black">
+                      <Button
+                        variant="outline"
+                        className="mt-2 border-2 border-black"
+                      >
                         View Details
                       </Button>
                     </div>
@@ -329,10 +485,30 @@ export default function ProfilePage() {
               <CardContent className="p-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {[
-                    { name: 'Team Alpha', game: 'VALORANT', role: 'Captain', members: 5 },
-                    { name: 'Pro Squad', game: 'League of Legends', role: 'Member', members: 5 },
-                    { name: 'Elite Force', game: 'CS:GO', role: 'Member', members: 5 },
-                    { name: 'Victory Legion', game: 'VALORANT', role: 'Captain', members: 5 },
+                    {
+                      name: "Team Alpha",
+                      game: "VALORANT",
+                      role: "Captain",
+                      members: 5,
+                    },
+                    {
+                      name: "Pro Squad",
+                      game: "League of Legends",
+                      role: "Member",
+                      members: 5,
+                    },
+                    {
+                      name: "Elite Force",
+                      game: "CS:GO",
+                      role: "Member",
+                      members: 5,
+                    },
+                    {
+                      name: "Victory Legion",
+                      game: "VALORANT",
+                      role: "Captain",
+                      members: 5,
+                    },
                   ].map((team, index) => (
                     <div
                       key={index}
@@ -347,7 +523,10 @@ export default function ProfilePage() {
                           <h3 className="font-bold">{team.name}</h3>
                           <p className="text-sm text-gray-600">{team.game}</p>
                           <div className="flex items-center gap-2 mt-1">
-                            <Badge variant="outline" className="border-2 border-black">
+                            <Badge
+                              variant="outline"
+                              className="border-2 border-black"
+                            >
                               {team.role}
                             </Badge>
                             <span className="text-sm text-gray-600">
@@ -355,7 +534,10 @@ export default function ProfilePage() {
                             </span>
                           </div>
                         </div>
-                        <Button variant="outline" className="border-2 border-black">
+                        <Button
+                          variant="outline"
+                          className="border-2 border-black"
+                        >
                           View Team
                         </Button>
                       </div>
@@ -368,6 +550,5 @@ export default function ProfilePage() {
         </Tabs>
       </div>
     </div>
-  )
+  );
 }
-

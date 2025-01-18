@@ -1,40 +1,101 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardFooter } from "@/components/ui/card"
-import { Progress } from "@/components/ui/progress"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Badge } from "@/components/ui/badge"
-import { ScrollArea } from "@/components/ui/scroll-area"
-import { Gift, Trophy, Star, Clock, ChevronRight, Gamepad2, Target, Users } from 'lucide-react'
-import Image from "next/image"
+import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardFooter,
+} from "@/components/ui/card";
+import { Progress } from "@/components/ui/progress";
+import { Badge } from "@/components/ui/badge";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import {
+  Gift,
+  Trophy,
+  Star,
+  ChevronRight,
+  Gamepad2,
+  Target,
+  Users,
+} from "lucide-react";
+import Image from "next/image";
 
 export default function RewardsPage() {
-  const [userPoints, setUserPoints] = useState(2450)
-  const [userLevel, setUserLevel] = useState(15)
+  const [userPoints, setUserPoints] = useState(2450);
+  const [userLevel, setUserLevel] = useState(15);
 
   const availableRewards = [
-    { id: 1, name: "Pro Gaming Chair", points: 5000, image: "/placeholder.svg" },
-    { id: 2, name: "Gaming Headset", points: 3000, image: "/placeholder.svg" },
-    { id: 3, name: "Premium Subscription", points: 1000, image: "/placeholder.svg" },
-    { id: 4, name: "Exclusive In-Game Item", points: 500, image: "/placeholder.svg" },
-    { id: 5, name: "Tournament Entry Ticket", points: 2000, image: "/placeholder.svg" },
-  ]
+    {
+      id: 1,
+      name: "Pro Gaming Chair",
+      points: 5000,
+      image: "/chair.jpg",
+    },
+    { id: 2, name: "Gaming Headset", points: 3000, image: "/headset.jpg" },
+    {
+      id: 3,
+      name: "VR Headset",
+      points: 10000,
+      image: "/VR.jpg",
+    },
+    {
+      id: 4,
+      name: "Gaming Controller",
+      points: 1500,
+      image: "/gamepad.jpg",
+    },
+    {
+      id: 5,
+      name: "Gaming mouse",
+      points: 1000,
+      image: "/mouse.jpg",
+    },
+  ];
 
   const rewardHistory = [
     { id: 1, name: "Exclusive In-Game Item", date: "2025-01-15", points: 500 },
     { id: 2, name: "Premium Subscription", date: "2024-12-20", points: 1000 },
-    { id: 3, name: "Tournament Entry Ticket", date: "2024-11-05", points: 2000 },
-  ]
+    {
+      id: 3,
+      name: "Tournament Entry Ticket",
+      date: "2024-11-05",
+      points: 2000,
+    },
+  ];
 
   const pointEarningMethods = [
-    { icon: <Trophy className="h-6 w-6" />, title: "Win Tournaments", description: "Earn up to 1000 points per tournament win" },
-    { icon: <Star className="h-6 w-6" />, title: "Daily Check-in", description: "Get 50 points every day you log in" },
-    { icon: <Users className="h-6 w-6" />, title: "Refer Friends", description: "Earn 200 points for each friend who joins" },
-    { icon: <Target className="h-6 w-6" />, title: "Complete Challenges", description: "Various challenges with point rewards" },
-  ]
-
+    {
+      icon: <Trophy className="h-6 w-6" />,
+      title: "Win Tournaments",
+      description: "Earn up to 1000 points per tournament win",
+    },
+    {
+      icon: <Star className="h-6 w-6" />,
+      title: "Daily Check-in",
+      description: "Get 50 points every day you log in",
+    },
+    {
+      icon: <Users className="h-6 w-6" />,
+      title: "Refer Friends",
+      description: "Earn 200 points for each friend who joins",
+    },
+    {
+      icon: <Target className="h-6 w-6" />,
+      title: "Complete Challenges",
+      description: "Various challenges with point rewards",
+    },
+  ];
+  useEffect(() => {
+    const fetcher = async () => {
+      const response = await fetch("/api/user");
+      const data = await response.json();
+      setUserPoints(data.points);
+      setUserLevel(1);
+    };
+    fetcher();
+  }, []);
   return (
     <div className="min-h-screen bg-[#FFFFEA]">
       {/* Header */}
@@ -55,19 +116,28 @@ export default function RewardsPage() {
                 <div className="flex items-center justify-between">
                   <div>
                     <h2 className="text-2xl font-bold">Your Rewards</h2>
-                    <p className="text-sm text-gray-600">Keep earning to unlock more!</p>
+                    <p className="text-sm text-gray-600">
+                      Keep earning to unlock more!
+                    </p>
                   </div>
                   <div className="text-right">
-                    <div className="text-3xl font-black text-[#FF5E5B]">{userPoints}</div>
+                    <div className="text-3xl font-black text-[#FF5E5B]">
+                      {userPoints}
+                    </div>
                     <div className="text-sm text-gray-600">Total Points</div>
                   </div>
                 </div>
                 <div className="mt-4 space-y-2">
                   <div className="flex items-center justify-between">
                     <span className="font-bold">Level {userLevel}</span>
-                    <span className="text-sm text-gray-600">Next level: {(userLevel + 1) * 1000} points</span>
+                    <span className="text-sm text-gray-600">
+                      Next level: {(userLevel + 1) * 1000} points
+                    </span>
                   </div>
-                  <Progress value={(userPoints % 1000) / 10} className="h-4 w-full rounded-full border-2 border-black bg-gray-200" />
+                  <Progress
+                    value={(userPoints % 1000) / 10}
+                    className="h-4 w-full rounded-full border-2 border-black bg-gray-200"
+                  />
                 </div>
               </CardContent>
             </Card>
@@ -75,12 +145,17 @@ export default function RewardsPage() {
             {/* Available Rewards */}
             <Card className="border-4 border-black">
               <CardHeader className="border-b-4 border-black bg-[#FF5E5B] p-4">
-                <h2 className="text-2xl font-bold text-white">Available Rewards</h2>
+                <h2 className="text-2xl font-bold text-white">
+                  Available Rewards
+                </h2>
               </CardHeader>
               <CardContent className="p-4">
                 <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                   {availableRewards.map((reward) => (
-                    <Card key={reward.id} className="group relative border-2 border-black transition-transform  ">
+                    <Card
+                      key={reward.id}
+                      className="group relative border-2 border-black transition-transform  "
+                    >
                       <CardContent className="p-4">
                         <div className="aspect-square overflow-hidden rounded-lg border-2 border-black">
                           <Image
@@ -122,12 +197,18 @@ export default function RewardsPage() {
               <CardContent className="p-4">
                 <ScrollArea className="h-[200px] rounded-md border-2 border-black p-4">
                   {rewardHistory.map((item) => (
-                    <div key={item.id} className="flex items-center justify-between border-b border-gray-200 py-2 last:border-b-0">
+                    <div
+                      key={item.id}
+                      className="flex items-center justify-between border-b border-gray-200 py-2 last:border-b-0"
+                    >
                       <div>
                         <div className="font-bold">{item.name}</div>
                         <div className="text-sm text-gray-600">{item.date}</div>
                       </div>
-                      <Badge variant="outline" className="border-2 border-black">
+                      <Badge
+                        variant="outline"
+                        className="border-2 border-black"
+                      >
                         {item.points} points
                       </Badge>
                     </div>
@@ -153,7 +234,9 @@ export default function RewardsPage() {
                       </div>
                       <div>
                         <h3 className="font-bold">{method.title}</h3>
-                        <p className="text-sm text-gray-600">{method.description}</p>
+                        <p className="text-sm text-gray-600">
+                          {method.description}
+                        </p>
                       </div>
                     </div>
                   ))}
@@ -201,6 +284,5 @@ export default function RewardsPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }
-

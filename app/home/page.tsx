@@ -58,11 +58,9 @@ export default function HomePage() {
         if (response.ok) {
           const user = await response.json();
           setUser(user);
-          console.log("Fetched user from API:", user);
 
           // Set user data in state
           setUserName(user.username);
-          console.log(user.username);
           // Cache user details in localStorage
           localStorage.setItem("userDetails", JSON.stringify(user));
         } else {

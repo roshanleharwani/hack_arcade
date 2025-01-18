@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { toast } from "react-hot-toast";
 import {
   Select,
   SelectContent,
@@ -64,6 +65,48 @@ export default function CreateTournament() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     console.log(formData);
+    const userDetails = localStorage.getItem("userDetails");
+    const id = userDetails ? JSON.parse(userDetails)._id : "";
+    if (
+      !formData.name ||
+      !formData.game ||
+      !formData.description ||
+      !formData.format ||
+      !formData.teamSize ||
+      !formData.maxTeams ||
+      !formData.entryFee ||
+      !formData.prizePool ||
+      !formData.rules ||
+      !date ||
+      !formData.startTime
+    ) {
+      toast.error("All fields are required");
+      return;
+    }
+    const response = await fetch("/api/create-tournament/", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: formData.name,
+        game: formData.game,
+        description: formData.description,
+        format: formData.format,
+        teamSize: formData.teamSize,
+        maxTeam: formData.maxTeams,
+        entryFees: formData.entryFee,
+        prizePool: formData.prizePool,
+        startTime: formData.startTime,
+        startDate: date,
+        stream: formData.streamRequired,
+        spectators: formData.allowSpectators,
+        userId: id,
+      }),
+    });
+    if (!response.ok) {
+      toast.error("Failed to create tournament");
+      return;
+    }
+    toast.success("Tournament created successfully");
   };
 
   return (
@@ -427,7 +470,7 @@ export default function CreateTournament() {
               </Button>
 
               <Button
-                onClick={step === 4 ? () => handleSubmit : nextStep}
+                onClick={step === 4 ? handleSubmit : nextStep}
                 className="bg-[#FF5E5B] hover:bg-[#FF5E5B]/90 text-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none transition-all"
               >
                 {step === 4 ? (

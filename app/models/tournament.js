@@ -33,6 +33,10 @@ const Tournament = new mongoose.Schema({
     type: Number,
     required: true,
   },
+  startDate:{
+    type:String,
+    required:true
+  },
   startTime:{
     type:String,
     required:true,
