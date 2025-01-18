@@ -80,7 +80,7 @@ export default function HomePage() {
         <main className="p-6">
           {/* Welcome Section */}
           <div className="mb-8">
-            <h1 className="text-3xl font-black mb-2">Welcome back, Player!</h1>
+            <h1 className="text-3xl font-black mb-2">Welcome back, Trickdo!</h1>
             <p className="text-gray-600">{"Here's what's happening in your gaming world"}</p>
           </div>
 
