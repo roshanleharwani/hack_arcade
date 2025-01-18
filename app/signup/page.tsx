@@ -9,9 +9,10 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Slider } from "@/components/ui/slider"
 import { ChevronLeft, ChevronRight, Gamepad2, Trophy, Users } from 'lucide-react'
 import Link from "next/link"
+import { toast } from 'react-hot-toast'
 import { useRouter } from 'next/navigation'
 export default function SignUpPage() {
-  const router= useRouter()
+  const router = useRouter()
   const [step, setStep] = useState(1)
   const [formData, setFormData] = useState({
     username: '',
@@ -36,6 +37,49 @@ export default function SignUpPage() {
   const prevStep = () => {
     if (step > 1) setStep(step - 1)
   }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!formData.email || !formData.password || !formData.username || !formData.gamerTag) {
+      toast.error('All fields are required!');
+      return;
+    }
+    if (formData.password !== formData.confirmPassword) {
+      toast.error('Passwords do not match!');
+      return;
+    }
+    try {
+      const response = await fetch('/api/user/sign-up', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email: formData.email, password: formData.password, username: formData.username, tag: formData.gamerTag }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        if (errorData.error === 'User already exists') {
+          toast.error('User already exists!');
+        } else {
+          toast.error('Signup failed');
+        }
+        throw new Error('Signup failed');
+      }
+
+      const data = await response.json();
+
+      toast.success('Signup successful!');
+      console.log('Signup successful:', data);
+
+     router.push('/home')
+
+    } catch (error) {
+      console.error('Error signing up:', error);
+      toast.error('An unexpected error occurred. Please try again.');
+    }
+  };
 
   return (
     <div className="min-h-screen bg-[#FFFFEA] py-12 px-4">
@@ -276,7 +320,7 @@ export default function SignUpPage() {
               </Button>
               
               <Button
-                onClick={step === 4 ? () => router.push('/home')  : nextStep}
+                onClick={step === 4 ? handleSubmit  : nextStep}
                 className="bg-[#FF5E5B] hover:bg-[#FF5E5B]/90 text-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none transition-all"
               >
                 {step === 4 ? (

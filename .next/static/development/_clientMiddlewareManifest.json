@@ -1,1 +1,38 @@
-[]
+[
+  {
+    "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/signin(\\\\.json)?[\\/#\\?]?$",
+    "originalSource": "/signin"
+  },
+  {
+    "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/signup(\\\\.json)?[\\/#\\?]?$",
+    "originalSource": "/signup"
+  },
+  {
+    "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/home(\\\\.json)?[\\/#\\?]?$",
+    "originalSource": "/home"
+  },
+  {
+    "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/create-tournament(\\\\.json)?[\\/#\\?]?$",
+    "originalSource": "/create-tournament"
+  },
+  {
+    "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/leaderboard(\\\\.json)?[\\/#\\?]?$",
+    "originalSource": "/leaderboard"
+  },
+  {
+    "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/profile(\\\\.json)?[\\/#\\?]?$",
+    "originalSource": "/profile"
+  },
+  {
+    "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/rewards(\\\\.json)?[\\/#\\?]?$",
+    "originalSource": "/rewards"
+  },
+  {
+    "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/teams(\\\\.json)?[\\/#\\?]?$",
+    "originalSource": "/teams"
+  },
+  {
+    "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/tournaments(\\\\.json)?[\\/#\\?]?$",
+    "originalSource": "/tournaments"
+  }
+]

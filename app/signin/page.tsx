@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 'use client'
 
 import { useState } from 'react'
@@ -7,34 +8,60 @@ import { Label } from "@/components/ui/label"
 import { Loader2, Lock, Mail } from 'lucide-react'
 import Link from "next/link"
 import { Alert, AlertDescription } from "@/components/ui/alert"
+import { toast } from 'react-hot-toast'
+import { useRouter } from 'next/navigation'
 
 export default function SignInPage() {
-  const [isLoading, setIsLoading] = useState(false)
+  const router = useRouter()
   const [error, setError] = useState('')
+  const [isLoading, setLoading] = useState(false)
   const [formData, setFormData] = useState({
     email: '',
     password: '',
   })
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsLoading(true)
-    setError('')
-    
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    
-    // Demo validation
+    e.preventDefault();
     if (!formData.email || !formData.password) {
-      setError('Please fill in all fields')
-      setIsLoading(false)
-      return
+      toast.error('Email and password are required!');
+      return;
     }
-    
-    // Handle actual sign in logic here
-    console.log('Signing in with:', formData)
-    setIsLoading(false)
-  }
+
+    setLoading(true);
+    try {
+      const response = await fetch('/api/user/sign-in', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email: formData.email, password: formData.password }),
+      });
+
+      console.log('Response status:', response.status);
+      const responseData = await response.json();
+      console.log('Response data:', responseData);
+
+      if (!response.ok) {
+        if (responseData.error) {
+          toast.error(responseData.error);
+          setError(responseData.error);
+          setLoading(false);
+          return;
+        }
+        throw new Error('Login failed');
+      }
+
+      toast.success('Logged in successfully!');
+      router.push('/home');
+
+    } catch (error) {
+      console.error('Error logging in:', error);
+      toast.error('An unexpected error occurred. Please try again.');
+      setError('An unexpected error occurred. Please try again.');
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-[#FFFFEA] py-12 px-4">
@@ -110,7 +137,7 @@ export default function SignInPage() {
               </div>
 
               <Button
-                type="submit"
+                type="submit" onClick={()=>handleSubmit}
                 className="w-full bg-[#FF5E5B] hover:bg-[#FF5E5B]/90 text-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none transition-all"
                 disabled={isLoading}
               >

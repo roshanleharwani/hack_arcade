@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Space_Mono } from 'next/font/google'
-
+import {Toaster} from 'react-hot-toast'
 const font = Space_Mono({ subsets: ["latin"], weight:"400",})
 
 export const metadata: Metadata = {
@@ -19,6 +19,7 @@ export default function RootLayout({
       <body
         className={`${font.className } antialiased`}
       >
+        <Toaster position="top-right" />
         {children}
       </body>
     </html>

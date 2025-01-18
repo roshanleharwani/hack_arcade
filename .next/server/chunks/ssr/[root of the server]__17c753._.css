@@ -627,6 +627,10 @@ body {
   height: .5rem;
 }
 
+.h-2\.5 {
+  height: .625rem;
+}
+
 .h-24 {
   height: 6rem;
 }
@@ -675,6 +679,10 @@ body {
   height: 200px;
 }
 
+.h-\[75\.5px\] {
+  height: 75.5px;
+}
+
 .h-\[var\(--radix-select-trigger-height\)\] {
   height: var(--radix-select-trigger-height);
 }
@@ -689,14 +697,6 @@ body {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-2\.5 {
-  height: .625rem;
-}
-
-.h-\[75\.5px\] {
-  height: 75.5px;
 }
 
 .max-h-96 {
@@ -729,6 +729,10 @@ body {
 
 .w-16 {
   width: 4rem;
+}
+
+.w-2\.5 {
+  width: .625rem;
 }
 
 .w-24 {
@@ -779,20 +783,16 @@ body {
   width: 2.25rem;
 }
 
+.w-\[180px\] {
+  width: 180px;
+}
+
 .w-auto {
   width: auto;
 }
 
 .w-full {
   width: 100%;
-}
-
-.w-2\.5 {
-  width: .625rem;
-}
-
-.w-\[180px\] {
-  width: 180px;
 }
 
 .min-w-\[800px\] {
@@ -936,6 +936,10 @@ body {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
+.grid-cols-12 {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -946,10 +950,6 @@ body {
 
 .grid-cols-4 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-.grid-cols-12 {
-  grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -1106,6 +1106,10 @@ body {
   border-radius: .25rem;
 }
 
+.rounded-\[inherit\] {
+  border-radius: inherit;
+}
+
 .rounded-full {
   border-radius: 9999px;
 }
@@ -1124,10 +1128,6 @@ body {
 
 .rounded-xl {
   border-radius: .75rem;
-}
-
-.rounded-\[inherit\] {
-  border-radius: inherit;
 }
 
 .border {
@@ -1159,6 +1159,10 @@ body {
   border-bottom-width: 4px;
 }
 
+.border-l {
+  border-left-width: 1px;
+}
+
 .border-r-4 {
   border-right-width: 4px;
 }
@@ -1177,10 +1181,6 @@ body {
 
 .border-t-4 {
   border-top-width: 4px;
-}
-
-.border-l {
-  border-left-width: 1px;
 }
 
 .border-\[\#00CECB\] {
@@ -1306,6 +1306,10 @@ body {
   background-color: #0003;
 }
 
+.bg-border {
+  background-color: hsl(var(--border));
+}
+
 .bg-card {
   background-color: hsl(var(--card));
 }
@@ -1355,10 +1359,6 @@ body {
 
 .bg-white\/10 {
   background-color: #ffffff1a;
-}
-
-.bg-border {
-  background-color: hsl(var(--border));
 }
 
 .fill-primary {
@@ -1614,9 +1614,19 @@ body {
   color: rgb(0 206 203 / var(--tw-text-opacity, 1));
 }
 
+.text-\[\#D8D8D8\] {
+  --tw-text-opacity: 1;
+  color: rgb(216 216 216 / var(--tw-text-opacity, 1));
+}
+
 .text-\[\#FF5E5B\] {
   --tw-text-opacity: 1;
   color: rgb(255 94 91 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#FFED66\] {
+  --tw-text-opacity: 1;
+  color: rgb(255 237 102 / var(--tw-text-opacity, 1));
 }
 
 .text-accent-foreground {
@@ -1720,16 +1730,6 @@ body {
 
 .text-white\/90 {
   color: #ffffffe6;
-}
-
-.text-\[\#D8D8D8\] {
-  --tw-text-opacity: 1;
-  color: rgb(216 216 216 / var(--tw-text-opacity, 1));
-}
-
-.text-\[\#FFED66\] {
-  --tw-text-opacity: 1;
-  color: rgb(255 237 102 / var(--tw-text-opacity, 1));
 }
 
 .underline {
@@ -1926,11 +1926,6 @@ body {
 
 .hover\:-translate-y-0\.5:hover {
   --tw-translate-y: -.125rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.hover\:-translate-y-1:hover {
-  --tw-translate-y: -.25rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -2258,6 +2253,11 @@ body {
   background-color: hsl(var(--input));
 }
 
+.data-\[state\=active\]\:text-black[data-state="active"] {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity, 1));
+}
+
 .data-\[state\=active\]\:text-foreground[data-state="active"] {
   color: hsl(var(--foreground));
 }
@@ -2265,11 +2265,6 @@ body {
 .data-\[state\=active\]\:text-white[data-state="active"] {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-
-.data-\[state\=active\]\:text-black[data-state="active"] {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity, 1));
 }
 
 .data-\[disabled\]\:opacity-50[data-disabled] {

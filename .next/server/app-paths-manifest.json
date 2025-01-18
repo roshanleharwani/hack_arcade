@@ -1,10 +1,17 @@
 {
-  "/page": "app/page.js",
-  "/signup/page": "app/signup/page.js",
-  "/home/page": "app/home/page.js",
+  "/leaderboard/page": "app/leaderboard/page.js",
   "/_not-found/page": "app/_not-found/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/home/page": "app/home/page.js",
+  "/rewards/page": "app/rewards/page.js",
+  "/teams/page": "app/teams/page.js",
+  "/profile/page": "app/profile/page.js",
   "/tournaments/page": "app/tournaments/page.js",
   "/tournament/[id]/page": "app/tournament/[id]/page.js",
-  "/rewards/page": "app/rewards/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js"
+  "/create-tournament/page": "app/create-tournament/page.js",
+  "/signup/page": "app/signup/page.js",
+  "/page": "app/page.js",
+  "/api/user/sign-up/route": "app/api/user/sign-up/route.js",
+  "/signin/page": "app/signin/page.js",
+  "/api/user/sign-in/route": "app/api/user/sign-in/route.js"
 }

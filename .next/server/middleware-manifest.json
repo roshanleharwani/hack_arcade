@@ -1,6 +1,65 @@
 {
   "version": 3,
-  "middleware": {},
-  "sortedMiddleware": [],
+  "middleware": {
+    "/": {
+      "files": [
+        "server/edge/chunks/_5b653c._.js",
+        "server/edge/chunks/[root of the server]__70655b._.js",
+        "server/edge/chunks/edge-wrapper_423d48.js"
+      ],
+      "name": "middleware",
+      "page": "/",
+      "matchers": [
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/signin(\\\\.json)?[\\/#\\?]?$",
+          "originalSource": "/signin"
+        },
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/signup(\\\\.json)?[\\/#\\?]?$",
+          "originalSource": "/signup"
+        },
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/home(\\\\.json)?[\\/#\\?]?$",
+          "originalSource": "/home"
+        },
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/create-tournament(\\\\.json)?[\\/#\\?]?$",
+          "originalSource": "/create-tournament"
+        },
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/leaderboard(\\\\.json)?[\\/#\\?]?$",
+          "originalSource": "/leaderboard"
+        },
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/profile(\\\\.json)?[\\/#\\?]?$",
+          "originalSource": "/profile"
+        },
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/rewards(\\\\.json)?[\\/#\\?]?$",
+          "originalSource": "/rewards"
+        },
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/teams(\\\\.json)?[\\/#\\?]?$",
+          "originalSource": "/teams"
+        },
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/tournaments(\\\\.json)?[\\/#\\?]?$",
+          "originalSource": "/tournaments"
+        }
+      ],
+      "wasm": [],
+      "assets": [],
+      "env": {
+        "__NEXT_BUILD_ID": "development",
+        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "dDezcwzhTw2yx8eM/SwY68qyGKI1hJPHDSHRupCWQ2E=",
+        "__NEXT_PREVIEW_MODE_ID": "4952c8c2352882c62491eb88f7d358f9",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "c1da0fc18e704d0ed5f3c3788540375239035024e1cefc2389283ae8d58c7ca9",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "df780f87a9539ce415f2168da69013463514ef45f5aab2f0f266f09534b4fd7f"
+      }
+    }
+  },
+  "sortedMiddleware": [
+    "/"
+  ],
   "functions": {}
 }
