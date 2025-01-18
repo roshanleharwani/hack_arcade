@@ -22,7 +22,7 @@ export default function HomePage() {
         ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'}
         md:translate-x-0
       `}>
-        <div className="p-4 border-b-4 border-black">
+        <div className="p-4 border-b-4 border-black h-[75.5px]">
           <Link href="/" className="flex items-center gap-2">
             <Trophy size={24} />
             <span className="font-black text-xl">TOURNEY.GG</span>

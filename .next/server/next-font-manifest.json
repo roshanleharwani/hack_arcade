@@ -26,6 +26,9 @@
     ],
     "[project]/app/teams/page": [
       "static/media/i7dPIFZifjKcF5UAWdDRYEF8RXi4EwQ-s.p.fc5a3bbb.woff2"
+    ],
+    "[project]/app/leaderboard/page": [
+      "static/media/i7dPIFZifjKcF5UAWdDRYEF8RXi4EwQ-s.p.fc5a3bbb.woff2"
     ]
   },
   "appUsingSizeAdjust": true,
