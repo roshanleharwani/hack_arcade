@@ -163,25 +163,25 @@ export default function LeaderboardPage() {
 
       {/* Leaderboard */}
       <section className="container mx-auto p-6">
-        <Card className="border-4 border-black">
-          <CardHeader className="border-b-4  bg-white p-4">
+        <Card className="border-2  border-black">
+          <CardHeader className="border-b-4  py-4 bg-white p-4">
             <Tabs defaultValue="global" className="w-full">
-              <TabsList className="flex w-full gap-2 rounded-xl border-4 border-black  bg-white p-2">
+              <TabsList className="flex w-full gap-2 rounded-xl border-2 border-black outline-none focus:outline-none bg-white p-2">
                 <TabsTrigger
                   value="global"
-                  className="flex-1 rounded-lg border-2   font-mono data-[state=active]:bg-[#00CECB] data-[state=active]:text-black"
+                  className="flex-1 rounded-lg    font-mono data-[state=active]:bg-[#00CECB] data-[state=active]:text-black"
                 >
                   Global
                 </TabsTrigger>
                 <TabsTrigger
                   value="regional"
-                  className="flex-1 rounded-lg border-2   font-mono data-[state=active]:bg-[#00CECB] data-[state=active]:text-black"
+                  className="flex-1 rounded-lg   font-mono data-[state=active]:bg-[#00CECB] data-[state=active]:text-black"
                 >
                   Regional
                 </TabsTrigger>
                 <TabsTrigger
                   value="friends"
-                  className="flex-1 rounded-lg border-2   font-mono data-[state=active]:bg-[#00CECB] data-[state=active]:text-black"
+                  className="flex-1 rounded-lg    font-mono data-[state=active]:bg-[#00CECB] data-[state=active]:text-black"
                 >
                   Friends
                 </TabsTrigger>
@@ -203,7 +203,7 @@ export default function LeaderboardPage() {
                     <div className="col-span-1 flex items-center justify-center gap-2">
                       <div className="flex items-center gap-1">
                         <span className="font-bold">{player.rank}</span>
-                        {getRankChange(player.rank, player.previousRank)}
+                        {getRankChange(player.rank, player.previousRank)}æ
                       </div>
                       {getRankIcon(player.rank)}
                     </div>
@@ -218,14 +218,7 @@ export default function LeaderboardPage() {
                       <div>
                         <div className="font-bold">{player.name}</div>
                         <div className="flex gap-1">
-                          {Object.entries(player.games).map(([game, rank], i) => (
-                            <span
-                              key={i}
-                              className="rounded-full border border-black bg-[#FFFFEA] px-2 py-0.5 text-xs"
-                            >
-                              {rank}
-                            </span>
-                          ))}
+                          
                         </div>
                       </div>
                     </div>

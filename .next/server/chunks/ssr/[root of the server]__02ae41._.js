@@ -786,19 +786,19 @@ function LeaderboardPage() {
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
                 className: "container mx-auto p-6",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Card"], {
-                    className: "border-4 border-black",
+                    className: "border-2  border-black",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardHeader"], {
-                        className: "border-b-4  bg-white p-4",
+                        className: "border-b-4  py-4 bg-white p-4",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Tabs"], {
                             defaultValue: "global",
                             className: "w-full",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TabsList"], {
-                                    className: "flex w-full gap-2 rounded-xl border-4 border-black  bg-white p-2",
+                                    className: "flex w-full gap-2 rounded-xl border-2 border-black outline-none focus:outline-none bg-white p-2",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TabsTrigger"], {
                                             value: "global",
-                                            className: "flex-1 rounded-lg border-2   font-mono data-[state=active]:bg-[#00CECB] data-[state=active]:text-black",
+                                            className: "flex-1 rounded-lg    font-mono data-[state=active]:bg-[#00CECB] data-[state=active]:text-black",
                                             children: "Global"
                                         }, void 0, false, {
                                             fileName: "[project]/app/leaderboard/page.tsx",
@@ -807,7 +807,7 @@ function LeaderboardPage() {
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TabsTrigger"], {
                                             value: "regional",
-                                            className: "flex-1 rounded-lg border-2   font-mono data-[state=active]:bg-[#00CECB] data-[state=active]:text-black",
+                                            className: "flex-1 rounded-lg   font-mono data-[state=active]:bg-[#00CECB] data-[state=active]:text-black",
                                             children: "Regional"
                                         }, void 0, false, {
                                             fileName: "[project]/app/leaderboard/page.tsx",
@@ -816,7 +816,7 @@ function LeaderboardPage() {
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TabsTrigger"], {
                                             value: "friends",
-                                            className: "flex-1 rounded-lg border-2   font-mono data-[state=active]:bg-[#00CECB] data-[state=active]:text-black",
+                                            className: "flex-1 rounded-lg    font-mono data-[state=active]:bg-[#00CECB] data-[state=active]:text-black",
                                             children: "Friends"
                                         }, void 0, false, {
                                             fileName: "[project]/app/leaderboard/page.tsx",
@@ -906,7 +906,8 @@ function LeaderboardPage() {
                                                                         lineNumber: 205,
                                                                         columnNumber: 25
                                                                     }, this),
-                                                                    getRankChange(player.rank, player.previousRank)
+                                                                    getRankChange(player.rank, player.previousRank),
+                                                                    "æ"
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/leaderboard/page.tsx",
@@ -945,15 +946,7 @@ function LeaderboardPage() {
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                        className: "flex gap-1",
-                                                                        children: Object.entries(player.games).map(([game, rank], i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                                className: "rounded-full border border-black bg-[#FFFFEA] px-2 py-0.5 text-xs",
-                                                                                children: rank
-                                                                            }, i, false, {
-                                                                                fileName: "[project]/app/leaderboard/page.tsx",
-                                                                                lineNumber: 222,
-                                                                                columnNumber: 29
-                                                                            }, this))
+                                                                        className: "flex gap-1"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/leaderboard/page.tsx",
                                                                         lineNumber: 220,
@@ -978,12 +971,12 @@ function LeaderboardPage() {
                                                             children: player.team
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/leaderboard/page.tsx",
-                                                            lineNumber: 233,
+                                                            lineNumber: 226,
                                                             columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/leaderboard/page.tsx",
-                                                        lineNumber: 232,
+                                                        lineNumber: 225,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -995,7 +988,7 @@ function LeaderboardPage() {
                                                                     className: "h-4 w-4 text-[#FFED66]"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/leaderboard/page.tsx",
-                                                                    lineNumber: 239,
+                                                                    lineNumber: 232,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1003,18 +996,18 @@ function LeaderboardPage() {
                                                                     children: player.points
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/leaderboard/page.tsx",
-                                                                    lineNumber: 240,
+                                                                    lineNumber: 233,
                                                                     columnNumber: 25
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/leaderboard/page.tsx",
-                                                            lineNumber: 238,
+                                                            lineNumber: 231,
                                                             columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/leaderboard/page.tsx",
-                                                        lineNumber: 237,
+                                                        lineNumber: 230,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1029,17 +1022,17 @@ function LeaderboardPage() {
                                                                 children: player.winRate
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/leaderboard/page.tsx",
-                                                                lineNumber: 245,
+                                                                lineNumber: 238,
                                                                 columnNumber: 25
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/leaderboard/page.tsx",
-                                                            lineNumber: 244,
+                                                            lineNumber: 237,
                                                             columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/leaderboard/page.tsx",
-                                                        lineNumber: 243,
+                                                        lineNumber: 236,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1047,7 +1040,7 @@ function LeaderboardPage() {
                                                         children: player.earnings
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/leaderboard/page.tsx",
-                                                        lineNumber: 253,
+                                                        lineNumber: 246,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
@@ -1069,12 +1062,12 @@ function LeaderboardPage() {
                                         children: "Regional leaderboard content goes here."
                                     }, void 0, false, {
                                         fileName: "[project]/app/leaderboard/page.tsx",
-                                        lineNumber: 260,
+                                        lineNumber: 253,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/leaderboard/page.tsx",
-                                    lineNumber: 259,
+                                    lineNumber: 252,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TabsContent"], {
@@ -1084,12 +1077,12 @@ function LeaderboardPage() {
                                         children: "Friends leaderboard content goes here."
                                     }, void 0, false, {
                                         fileName: "[project]/app/leaderboard/page.tsx",
-                                        lineNumber: 263,
+                                        lineNumber: 256,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/leaderboard/page.tsx",
-                                    lineNumber: 262,
+                                    lineNumber: 255,
                                     columnNumber: 15
                                 }, this)
                             ]

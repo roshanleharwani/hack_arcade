@@ -1,5 +1,11 @@
 {
   "app": {
+    "[project]/app/page": [
+      "static/media/i7dPIFZifjKcF5UAWdDRYEF8RXi4EwQ-s.p.fc5a3bbb.woff2"
+    ],
+    "[project]/app/signup/page": [
+      "static/media/i7dPIFZifjKcF5UAWdDRYEF8RXi4EwQ-s.p.fc5a3bbb.woff2"
+    ],
     "[project]/app/home/page": [
       "static/media/i7dPIFZifjKcF5UAWdDRYEF8RXi4EwQ-s.p.fc5a3bbb.woff2"
     ],
@@ -9,25 +15,16 @@
     "[project]/app/create-tournament/page": [
       "static/media/i7dPIFZifjKcF5UAWdDRYEF8RXi4EwQ-s.p.fc5a3bbb.woff2"
     ],
-    "[project]/app/profile/page": [
+    "[project]/app/teams/page": [
+      "static/media/i7dPIFZifjKcF5UAWdDRYEF8RXi4EwQ-s.p.fc5a3bbb.woff2"
+    ],
+    "[project]/app/leaderboard/page": [
       "static/media/i7dPIFZifjKcF5UAWdDRYEF8RXi4EwQ-s.p.fc5a3bbb.woff2"
     ],
     "[project]/app/tournaments/page": [
       "static/media/i7dPIFZifjKcF5UAWdDRYEF8RXi4EwQ-s.p.fc5a3bbb.woff2"
     ],
-    "[project]/app/page": [
-      "static/media/i7dPIFZifjKcF5UAWdDRYEF8RXi4EwQ-s.p.fc5a3bbb.woff2"
-    ],
-    "[project]/app/signup/page": [
-      "static/media/i7dPIFZifjKcF5UAWdDRYEF8RXi4EwQ-s.p.fc5a3bbb.woff2"
-    ],
-    "[project]/app/tournament/[id]/page": [
-      "static/media/i7dPIFZifjKcF5UAWdDRYEF8RXi4EwQ-s.p.fc5a3bbb.woff2"
-    ],
-    "[project]/app/teams/page": [
-      "static/media/i7dPIFZifjKcF5UAWdDRYEF8RXi4EwQ-s.p.fc5a3bbb.woff2"
-    ],
-    "[project]/app/leaderboard/page": [
+    "[project]/app/profile/page": [
       "static/media/i7dPIFZifjKcF5UAWdDRYEF8RXi4EwQ-s.p.fc5a3bbb.woff2"
     ]
   },
