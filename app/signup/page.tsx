@@ -9,8 +9,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Slider } from "@/components/ui/slider"
 import { ChevronLeft, ChevronRight, Gamepad2, Trophy, Users } from 'lucide-react'
 import Link from "next/link"
-
+import { useRouter } from 'next/navigation'
 export default function SignUpPage() {
+  const router= useRouter()
   const [step, setStep] = useState(1)
   const [formData, setFormData] = useState({
     username: '',
@@ -275,7 +276,7 @@ export default function SignUpPage() {
               </Button>
               
               <Button
-                onClick={step === 4 ? () => console.log('Form submitted:', formData) : nextStep}
+                onClick={step === 4 ? () => router.push('/home')  : nextStep}
                 className="bg-[#FF5E5B] hover:bg-[#FF5E5B]/90 text-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none transition-all"
               >
                 {step === 4 ? (
