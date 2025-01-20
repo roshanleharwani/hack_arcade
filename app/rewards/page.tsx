@@ -21,10 +21,12 @@ import {
   Users,
 } from "lucide-react";
 import Image from "next/image";
+import { ConfettiEffect } from "@/components/confetti-effect";
 
 export default function RewardsPage() {
   const [userPoints, setUserPoints] = useState(2450);
   const [userLevel, setUserLevel] = useState(15);
+  const [showConfetti, setShowConfetti] = useState(false);
 
   const availableRewards = [
     {
@@ -98,6 +100,7 @@ export default function RewardsPage() {
   }, []);
   return (
     <div className="min-h-screen bg-[#FFFFEA]">
+      <ConfettiEffect active={showConfetti} />
       {/* Header */}
       <header className="border-b-4 border-black bg-[#00CECB] p-6">
         <div className="container mx-auto">
@@ -177,6 +180,13 @@ export default function RewardsPage() {
                             size="sm"
                             className="border-2 border-black"
                             disabled={userPoints < reward.points}
+                            onClick={() => {
+                              if (userPoints >= reward.points) {
+                                setShowConfetti(true);
+                                setTimeout(() => setShowConfetti(false), 3000);
+                                setUserPoints((prev) => prev - reward.points);
+                              }
+                            }}
                           >
                             Redeem
                           </Button>

@@ -95,7 +95,7 @@ export default function HomePage() {
           {[
             { icon: Gamepad2, label: "Tournaments", href: "/tournaments" },
             { icon: Users, label: "My Teams", href: "/teams" },
-            { icon: Twitch, label: "Live Matches", href: "/live" },
+            { icon: Twitch, label: "Live Matches", href: "/live-matches" },
             { icon: Crown, label: "Leaderboard", href: "/leaderboard" },
             { icon: Gift, label: "Rewards", href: "/rewards" },
           ].map((item, index) => (
